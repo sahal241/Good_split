@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#348e7f" />
+      <stop offset="100%" stop-color="#1b534a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Full bleed for maskable icon -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+
+  <!-- Centered logo within 80% safe zone -->
+  <g transform="translate(51, 51) scale(0.8)" fill="#FFFFFF">
+    <path d="M 190 140 C 235 140 265 165 272 205 L 225 212 C 220 185 205 174 188 174 C 158 174 136 198 136 242 C 136 286 158 310 188 310 C 210 310 224 296 226 274 L 185 274 L 185 244 L 272 244 L 272 284 C 263 325 230 344 188 344 C 135 344 92 305 92 242 C 92 179 135 140 190 140 Z" />
+    <path d="M 270 335 L 295 145 L 308 145 L 283 335 Z" fill="#7ee8d5" />
+    <path d="M 335 344 C 295 344 275 324 272 290 L 314 282 C 316 302 328 312 344 312 C 360 312 374 302 374 288 C 374 274 362 266 338 258 C 304 246 278 232 278 198 C 278 162 305 140 342 140 C 378 140 405 162 408 196 L 368 202 C 365 184 354 172 338 172 C 324 172 314 180 314 194 C 314 206 324 214 346 220 C 382 232 410 248 410 286 C 410 322 380 344 335 344 Z" />
+    <circle cx="256" cy="395" r="14" fill="#7ee8d5" />
+  </g>
+</svg>

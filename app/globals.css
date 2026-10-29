@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: 169 47% 33%;
+  --primary-foreground: 0 0% 100%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Colors */
+  --color-bg: #F3ECE1;
+  --color-surface: #FFFFFF;
+  --color-accent: #2D7D6F;
+  --color-accent-light: #E6F3F1;
+  --color-accent-dark: #1F5C52;
+  --color-ink: #1A1A1A;
+  --color-muted: #6B7280;
+  --color-border: #E2D6C8;
+  --color-danger: #C0392B;
+  --color-danger-light: #FDECEA;
+  --color-positive: #1A7F4E;
+  --color-positive-light: #E6F4EE;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+  --font-heading: var(--font-heading), "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Border radii */
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.25rem;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgba(0,0,0,0.07), 0 1px 2px -1px rgba(0,0,0,0.05);
+  --shadow-modal: 0 20px 60px -10px rgba(0,0,0,0.25);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html, body {
+    font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+    background-color: #F3ECE1;
+    color: #1A1A1A;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media print {
+  /* Hide non-printable web elements */
+  nav, footer, .no-print, button, .install-banner {
+    display: none !important;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  #print-statement {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
